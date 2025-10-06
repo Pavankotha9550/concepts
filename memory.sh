@@ -10,6 +10,6 @@ do
         mount=$(grep -v Filesystem |awk '{print $7F}')
         msg+= $mount: $usage
     fi
-done >>>$usage
+done >>> $usage
 
 echo -e "high memory utilization on $msg \n"
