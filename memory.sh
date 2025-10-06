@@ -3,7 +3,7 @@
 usage=$( df -hT | grep -v Filesystem |awk '{print $6F}' |cut -d "%" -f1)
 msg=''
 
-while IFS=read line
+while IFS= read line
 do
     if [ $line -gt 1 ]
     then
