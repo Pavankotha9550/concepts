@@ -7,7 +7,7 @@ while IFS= read line
 do
     if [ $line -ge 1 ]
     then
-        mount=$(grep -v Filesystem |awk '{print $7F}')
+        mount=$(df -hT | grep -v Filesystem |awk '{print $7F}')
         msg+= "high dish usage on $mount: $usage \n"
     fi
 done <<< $usage
