@@ -13,6 +13,6 @@ do
   fi 
 done <<< $usage
 
-echo $msg
+echo -e $msg
 
 #df -hT | grep -v Filesystem |awk '{print $6F}' |cut -d "%" -f1
