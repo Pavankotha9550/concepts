@@ -7,7 +7,7 @@ while IFS= read -r line
 do
     num=$(echo $line |awk '{print $6F}' |cut -d "%" -f1)
     mount=$(echo $line |awk '{print $7F}')
-    if [ $num -ge 0 ]
+    if [ $num -gt 0 ]
     then
     msg+="hight on $mount : $num \n"
   fi 
