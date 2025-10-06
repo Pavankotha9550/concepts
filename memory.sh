@@ -8,7 +8,7 @@ do
     if [ $line -ge 1 ]
     then
         mount=$(grep -v Filesystem |awk '{print $7F}')
-        msg+= $mount: $usage
+        msg+= "$mount: $usage"
     fi
 done <<< $usage
 
