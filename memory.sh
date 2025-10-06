@@ -8,8 +8,8 @@ do
     if [ $line -ge 1 ]
     then
         mount=$(grep -v Filesystem |awk '{print $7F}')
-        msg+= "$mount: $usage"
+        msg+= "high dish usage on $mount: $usage \n"
     fi
 done <<< $usage
 
-echo -e "high memory utilization on $msg \n"
+echo $msg
