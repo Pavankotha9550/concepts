@@ -1,12 +1,10 @@
 #!/bim/bash
 
 usage=$( df -hT | grep -v Filesystem |awk '{print $6F}' |cut -d "%" -f1)
-count=0
+msg=''
 
 while IFS= read -r line
 do
-    echo line 
-    count+=1
+  echo line  
 done <<< $usage
 
-echo $count
