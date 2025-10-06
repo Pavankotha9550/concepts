@@ -5,8 +5,8 @@ msg=''
 
 while IFS= read -r line
 do
-    num=$($line |awk '{print $6F}' |cut -d "%" -f1)
-    mount=$($line |awk '{print $7F}')
+    num=$(echo $line |awk '{print $6F}' |cut -d "%" -f1)
+    mount=$(echo $line |awk '{print $7F}')
     if [ $num -ge 0 ]
     then
     msg+="hight on $mount : $num \n"
