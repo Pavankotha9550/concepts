@@ -5,7 +5,7 @@ msg=''
 
 while IFS= read line
 do
-    if [ $line -gt 1 ]
+    if [ $line -ge 1 ]
     then
         mount=$(grep -v Filesystem |awk '{print $7F}')
         msg+= $mount: $usage
