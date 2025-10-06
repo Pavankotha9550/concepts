@@ -1,15 +1,12 @@
 #!/bim/bash
 
 usage=$( df -hT | grep -v Filesystem |awk '{print $6F}' |cut -d "%" -f1)
-msg=''
+count=0
 
 while IFS= read -r line
 do
-    if [ $line -ge 1 ]
-    then
-        mount=$(df -hT | grep -v Filesystem |awk '{print $7F}')
-        msg+= "high dish usage on $mount: $usage \n"
-    fi
+    echo line 
+    count+=1
 done <<< $usage
 
-echo $msg
+echo $count
