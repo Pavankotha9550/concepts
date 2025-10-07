@@ -18,4 +18,4 @@ echo -e $msg
 
 #df -hT | grep -v Filesystem |awk '{print $6F}' |cut -d "%" -f1
 
-sh mailtemplate.sh "DevOps Team" "High Disk Usage" "$IP" "$msg" "info@joindevops.com" "ALERT-High Disk Usage"
+sh mailtemplate.sh "DevOps Team" "High Disk Usage" "$IP" "$msg" "pavanktha9550@gmail.com" "ALERT-High Disk Usage"
