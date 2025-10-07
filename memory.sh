@@ -10,7 +10,7 @@ do
     mount=$(echo $line |awk '{print $7F}')
     if [ $num -gt 0 ]
     then
-    msg+="high on $mount : $num \n"
+    msg+="high on $mount : $num \n <br>"
   fi 
 done <<< $usage
 
