@@ -1,14 +1,14 @@
 #!/bin/bash
 
-sudo dnf install msmtp -y
+#sudo dnf install msmtp -y
 
 # hqms szia ztdw ybnj
 
-cp ./msmtprc /etc/msmtprc
-sudo chmod 644 /etc/msmtprc
+#cp ./msmtprc /etc/msmtprc
+#sudo chmod 644 /etc/msmtprc
 
-sudo touch /var/log/msmtp.log
-sudo chmod 666 /var/log/msmtp.log
+#sudo touch /var/log/msmtp.log
+#sudo chmod 666 /var/log/msmtp.log
 
 {
 echo "To: pavanktha9550@gmail.com"
